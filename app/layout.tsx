@@ -4,6 +4,8 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Cristobal Fuentealba',
   description: 'Fullstack web developer specializing in React, Next.js, Node.js and modern web technologies. Creating responsive and scalable web applications.',
+  authors: [{ name: 'Cristobal Fuentealba' }],
+  creator: 'Cristobal Fuentealba',
 }
 
 export default function RootLayout({
