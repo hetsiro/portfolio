@@ -3,8 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  description: 'Fullstack web developer specializing in React, Next.js, Node.js and modern web technologies. Creating responsive and scalable web applications.',
 }
 
 export default function RootLayout({
