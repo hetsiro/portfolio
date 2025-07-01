@@ -122,7 +122,7 @@ export default function Portfolio() {
               </p>
             </div>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8">
-              I'm a passionate Full-Stack developer with 1+ year of experience
+              I'm a passionate Full-Stack developer with 2+ year of experience
               creating modern web applications. I specialize in React, Next.js,
               and Node.js, with a focus on building scalable and user-friendly
               solutions. I love turning complex problems into simple, with
