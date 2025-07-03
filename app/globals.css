@@ -137,7 +137,7 @@ body {
     #fecfef,
     #ff0080
   );
-  opacity: 50%;
+  opacity: 35%;
   filter: blur(50px);
   transform: translate(-50%, -50%);
   border-radius: 100%;
