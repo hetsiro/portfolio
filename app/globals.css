@@ -4,13 +4,14 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  overscroll-behavior-y: contain;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-  
+
   @keyframes spin-360 {
     0% {
       transform: rotate(0deg);
@@ -19,7 +20,7 @@ body {
       transform: rotate(360deg);
     }
   }
-  
+
   .rotate-360 {
     animation: spin-360 0.6s ease-in-out;
   }
@@ -103,5 +104,57 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* .hexagon {
+  width: 64px;
+  height: 74px;
+  background: linear-gradient(to right, #18181b 50%, #27272a 50%);
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  margin: 4px;
+  display: inline-block;
+} */
+
+.bg-grid {
+  background-image: url("/grid.svg");
+  background-repeat: repeat;
+}
+
+.animated-gradient-bg {
+  background: linear-gradient(
+    270deg,
+    #ff0080,
+    #7928ca,
+    #2af598,
+    #fecfef,
+    #ff0080
+  );
+  opacity: 50%;
+  filter: blur(50px);
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  width: 30em;
+  height: 30em;
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
