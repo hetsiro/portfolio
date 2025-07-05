@@ -11,6 +11,7 @@ import {
 import { Github, ExternalLink, Mail, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import SplineScene from "@/components/SplineScene";
 
 export default function Portfolio() {
   const [rotatingSvgs, setRotatingSvgs] = useState<Set<string>>(new Set());
@@ -116,7 +117,7 @@ export default function Portfolio() {
     <div ref={containerRef} className="relative min-h-screen bg-gray-900">
       <div ref={lightRef} className="fixed inset-0 animated-gradient-bg" />
       <div className="absolute inset-0 bg-grid" />
-      
+
       {/* Todo el contenido con z-index positivo */}
       <div className="relative z-10">
         {/* Hero/About Section */}
@@ -147,11 +148,11 @@ export default function Portfolio() {
                 </p>
               </div>
               <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8">
-                I'm a passionate Full-Stack developer with 2+ years of experience
-                creating modern web applications. I specialize in React, Next.js,
-                and Node.js, with a focus on building scalable and user-friendly
-                solutions. I love turning complex problems into simple, with
-                amazing designs.
+                I'm a passionate Full-Stack developer with 2+ years of
+                experience creating modern web applications. I specialize in
+                React, Next.js, and Node.js, with a focus on building scalable
+                and user-friendly solutions. I love turning complex problems
+                into simple, with amazing designs.
               </p>
 
               {/* Technologies Section */}
@@ -381,9 +382,10 @@ export default function Portfolio() {
                 Let's Work Together
               </h2>
               <p className="text-lg text-gray-400 mb-8">
-                I'm always interested in new opportunities and exciting projects.
-                Feel free to reach out if you'd like to collaborate!
+                I'm always interested in new opportunities and exciting
+                projects. Feel free to reach out if you'd like to collaborate!
               </p>
+              <SplineScene sceneUrl="https://prod.spline.design/aYwAg-2udgaEgxd6/scene.splinecode" className="hidden md:block" />
               <Button
                 size="lg"
                 className="bg-yellow-600 hover:bg-yellow-700 text-white transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/25"
