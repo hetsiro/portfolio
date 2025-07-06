@@ -47,6 +47,23 @@ export default function Portfolio() {
       demo: "https://cvd-comida-ex-alumnos-bsik.vercel.app/compra-tu-preventa/preventa",
     },
     {
+      title: "Ticket sales for Aumusement Kids Park.",
+      description:
+        "A Full-Stack ticket sales app, I improved the original website, featuring a renewed design, modern animations, responsive, and faster performance, includes form handling, Webpay integration, and PDF ticket downloads.",
+      image: "/projects/mampato.png",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Axios",
+        "Webpay",
+        "React Hook Form",
+      ],
+      github: "disabled",
+      demo: "https://mampato-tickets.vercel.app",
+    },
+    {
       title: "Bazar Online",
       description:
         "Full-stack e-commerce application built with the MERN stack. The project features have a clean and responsive design, allowing users to browse products, add them to a cart. Includes user authentication, and full CRUD functionality.",
