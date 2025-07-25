@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -100,28 +100,13 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
-
-/* .hexagon {
-  width: 64px;
-  height: 74px;
-  background: linear-gradient(to right, #18181b 50%, #27272a 50%);
-  clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
-  margin: 4px;
-  display: inline-block;
-} */
 
 .bg-grid {
   background-image: url("/grid.svg");
@@ -157,4 +142,8 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.clip-polygon {
+  clip-path: polygon(100% 20%, 100% 80%, 0 80%, 0 20%);
 }

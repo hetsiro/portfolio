@@ -31,10 +31,28 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "El Mejor Maestro de Chile",
+      description:
+        "Registration form for the television program 'El Mejor Maestro de Chile'. Developed with WebSocket, SignalR, iframe and Hub for real-time communication. Includes form validation, API integration and responsive design.",
+      image: "/projects/mejor-maestro.webp",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "WebSocket",
+        "SignalR",
+        "Hub",
+        "Iframe",
+      ],
+      github: "disabled",
+      demo: "https://qa-mejor-maestro.vercel.app",
+    },
+    {
       title: "Ticket sales for a school event.",
       description:
         "A Full-Stack ticket sales app, I replicated the design and made it functional and responsive, with form handling, Webpay integration, and PDF ticket downloads.",
-      image: "/projects/colegio-verbo-divino.jpg",
+      image: "/projects/colegio-verbo-divino.webp",
       technologies: [
         "Next.js",
         "React",
@@ -50,7 +68,7 @@ export default function Portfolio() {
       title: "Ticket sales for Aumusement Kids Park.",
       description:
         "A Full-Stack ticket sales app, I improved the original website, featuring a renewed design, modern animations, responsive, and faster performance, includes form handling, Webpay integration, and PDF ticket downloads.",
-      image: "/projects/mampato.png",
+      image: "/projects/mampato.webp",
       technologies: [
         "Next.js",
         "React",
@@ -64,10 +82,25 @@ export default function Portfolio() {
       demo: "https://mampato-tickets.vercel.app",
     },
     {
+      title: "TECK",
+      description:
+        "Registration form for a mining industry party event. Features modern animations, form validation, and ticket download functionality. Built with responsive design.",
+      image: "/projects/teck.webp",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "React Hook Form",
+      ],
+      github: "disabled",
+      demo: "https://teck-app-eta.vercel.app",
+    },
+    {
       title: "Bazar Online",
       description:
         "Full-stack e-commerce application built with the MERN stack. The project features have a clean and responsive design, allowing users to browse products, add them to a cart. Includes user authentication, and full CRUD functionality.",
-      image: "/projects/bazar-online.png",
+      image: "/projects/bazar-online.webp",
       technologies: [
         "React",
         "Javascript",
@@ -82,7 +115,7 @@ export default function Portfolio() {
       title: "Bazar Online API",
       description:
         "Backend API built with Node.js and Express. Features include RESTful routes, controllers for cart, users, and products management, MongoDB models with Mongoose, and JWT middleware for authentication and authorization.",
-      image: "/projects/bazar-online-API.jpg",
+      image: "/projects/bazar-online-API.webp",
       technologies: ["MongoDB", "Express.js", "Node.js", "Render"],
       github: "https://github.com/hetsiro/auction-market-api",
       demo: "https://auction-market-three.vercel.app/login",
@@ -148,14 +181,14 @@ export default function Portfolio() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="max-w-4xl mx-auto text-center bg-gradient-to-b from-gray-900/80 to-gray-700/100 hover:scale-105 transition-all rounded-2xl p-8">
+            <div className="max-w-4xl mx-auto text-center bg-gradient-to-b from-gray-900/80 to-gray-700/100 hover:scale-105 transition-all duration-500 rounded-2xl p-8">
               <div className="mb-8">
                 <Image
-                  src="/profile.png"
+                  src="/profile.webp"
                   alt="Profile"
                   width={150}
                   height={150}
-                  className="rounded-full mx-auto mb-6 border-2 border-gray-800"
+                  className="rounded-full mx-auto mb-6 hover:scale-110 hover:brightness-110 hover:-rotate-3 transition-all duration-500 cursor-pointer"
                 />
                 <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                   Cristóbal Fuentealba
@@ -402,15 +435,17 @@ export default function Portfolio() {
                 I'm always interested in new opportunities and exciting
                 projects. Feel free to reach out if you'd like to collaborate!
               </p>
-              <SplineScene sceneUrl="https://prod.spline.design/aYwAg-2udgaEgxd6/scene.splinecode" className="hidden md:block" />
+              <SplineScene sceneUrl="https://prod.spline.design/aYwAg-2udgaEgxd6/scene.splinecode" className="invisible md:visible -my-20 clip-polygon" />
               <Button
                 size="lg"
                 className="bg-yellow-600 hover:bg-yellow-700 text-white transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/25"
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => {
+                  const email = "fhcristobal@hotmail.com";
+                  const subject = "Portfolio Contact";
+                  const body = "Hi Cristóbal, I'd like to discuss a project with you.";
+                  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                  window.open(gmailUrl, "_blank");
+                }}
               >
                 <Mail className="mr-2 h-4 w-4" />
                 Get In Touch
